@@ -1,0 +1,396 @@
+[
+  {
+    "imie": "Jan",
+    "nazwisko": "Kowalski",
+    "dept": "Marketing",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-04",
+        "m_docelowe": "Warszawa",
+        "nr_rej": "RZE 8765E",
+        "dystans": [
+          308,
+          314
+        ],
+        "stawka": 0.87
+      },
+      "del_2": {
+        "data_w": "2024-09-11",
+        "m_docelowe": "Kraków",
+        "nr_rej": "RZE 8765E",
+        "dystans": [
+          167,
+          182
+        ],
+        "stawka": 0.87
+      }
+    }
+  },
+  {
+    "imie": "Piotr",
+    "nazwisko": "Nowakowski",
+    "dept": "Sales",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-06",
+        "m_docelowe": "Gdańsk",
+        "nr_rej": "GD 12345A",
+        "dystans": [
+          402,
+          415
+        ],
+        "stawka": 0.85
+      },
+      "del_2": {
+        "data_w": "2024-09-12",
+        "m_docelowe": "Łódź",
+        "nr_rej": "GD 12345A",
+        "dystans": [
+          210,
+          230
+        ],
+        "stawka": 0.85
+      },
+      "del_3": {
+        "data_w": "2024-09-20",
+        "m_docelowe": "Katowice",
+        "nr_rej": "GD 12345A",
+        "dystans": [
+          300,
+          320
+        ],
+        "stawka": 0.85
+      }
+    }
+  },
+  {
+    "imie": "Anna",
+    "nazwisko": "Wiśniewska",
+    "dept": "IT",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-02",
+        "m_docelowe": "Poznań",
+        "nr_rej": "KT 99876B",
+        "dystans": [
+          500,
+          530
+        ],
+        "stawka": 0.88
+      },
+      "del_2": {
+        "data_w": "2024-09-10",
+        "m_docelowe": "Kielce",
+        "nr_rej": "KT 99876B",
+        "dystans": [
+          180,
+          190
+        ],
+        "stawka": 0.88
+      }
+    }
+  },
+  {
+    "imie": "Tomasz",
+    "nazwisko": "Kwiatkowski",
+    "dept": "HR",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-05",
+        "m_docelowe": "Szczecin",
+        "nr_rej": "SZ 23451C",
+        "dystans": [
+          400,
+          410
+        ],
+        "stawka": 0.9
+      },
+      "del_2": {
+        "data_w": "2024-09-14",
+        "m_docelowe": "Bydgoszcz",
+        "nr_rej": "SZ 23451C",
+        "dystans": [
+          120,
+          140
+        ],
+        "stawka": 0.9
+      },
+      "del_3": {
+        "data_w": "2024-09-20",
+        "m_docelowe": "Radom",
+        "nr_rej": "SZ 23451C",
+        "dystans": [
+          250,
+          265
+        ],
+        "stawka": 0.9
+      }
+    }
+  },
+  {
+    "imie": "Magdalena",
+    "nazwisko": "Lewandowska",
+    "dept": "Sales",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-07",
+        "m_docelowe": "Opole",
+        "nr_rej": "OP 67234D",
+        "dystans": [
+          130,
+          145
+        ],
+        "stawka": 0.89
+      },
+      "del_2": {
+        "data_w": "2024-09-15",
+        "m_docelowe": "Rzeszów",
+        "nr_rej": "OP 67234D",
+        "dystans": [
+          290,
+          310
+        ],
+        "stawka": 0.89
+      },
+      "del_3": {
+        "data_w": "2024-09-25",
+        "m_docelowe": "Słupsk",
+        "nr_rej": "OP 67234D",
+        "dystans": [
+          180,
+          190
+        ],
+        "stawka": 0.89
+      }
+    }
+  },
+  {
+    "imie": "Michał",
+    "nazwisko": "Zieliński",
+    "dept": "Engineering",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-08",
+        "m_docelowe": "Wrocław",
+        "nr_rej": "WR 65432E",
+        "dystans": [
+          350,
+          365
+        ],
+        "stawka": 0.92
+      },
+      "del_2": {
+        "data_w": "2024-09-16",
+        "m_docelowe": "Toruń",
+        "nr_rej": "WR 65432E",
+        "dystans": [
+          260,
+          275
+        ],
+        "stawka": 0.92
+      }
+    }
+  },
+  {
+    "imie": "Katarzyna",
+    "nazwisko": "Sikorska",
+    "dept": "Finance",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-09",
+        "m_docelowe": "Lublin",
+        "nr_rej": "LU 33421F",
+        "dystans": [
+          180,
+          195
+        ],
+        "stawka": 0.91
+      },
+      "del_2": {
+        "data_w": "2024-09-17",
+        "m_docelowe": "Białystok",
+        "nr_rej": "LU 33421F",
+        "dystans": [
+          240,
+          255
+        ],
+        "stawka": 0.91
+      },
+      "del_3": {
+        "data_w": "2024-09-21",
+        "m_docelowe": "Zamość",
+        "nr_rej": "LU 33421F",
+        "dystans": [
+          150,
+          170
+        ],
+        "stawka": 0.91
+      }
+    }
+  },
+  {
+    "imie": "Adam",
+    "nazwisko": "Kowal",
+    "dept": "HR",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-10",
+        "m_docelowe": "Kalisz",
+        "nr_rej": "KA 8745S",
+        "dystans": [
+          210,
+          225
+        ],
+        "stawka": 0.85
+      },
+      "del_2": {
+        "data_w": "2024-09-19",
+        "m_docelowe": "Płock",
+        "nr_rej": "KA 8745S",
+        "dystans": [
+          120,
+          135
+        ],
+        "stawka": 0.85
+      }
+    }
+  },
+  {
+    "imie": "Paulina",
+    "nazwisko": "Wójcik",
+    "dept": "Legal",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-11",
+        "m_docelowe": "Warszawa",
+        "nr_rej": "WA 3256R",
+        "dystans": [
+          310,
+          330
+        ],
+        "stawka": 0.94
+      },
+      "del_2": {
+        "data_w": "2024-09-18",
+        "m_docelowe": "Białystok",
+        "nr_rej": "WA 3256R",
+        "dystans": [
+          140,
+          160
+        ],
+        "stawka": 0.94
+      },
+      "del_3": {
+        "data_w": "2024-09-27",
+        "m_docelowe": "Łódź",
+        "nr_rej": "WA 3256R",
+        "dystans": [
+          190,
+          205
+        ],
+        "stawka": 0.94
+      },
+      "del_4": {
+        "data_w": "2024-09-29",
+        "m_docelowe": "Kraków",
+        "nr_rej": "WA 3256R",
+        "dystans": [
+          200,
+          215
+        ],
+        "stawka": 0.94
+      }
+    }
+  },
+  {
+    "imie": "Dominik",
+    "nazwisko": "Zalewski",
+    "dept": "IT",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-13",
+        "m_docelowe": "Poznań",
+        "nr_rej": "PO 1324L",
+        "dystans": [
+          150,
+          170
+        ],
+        "stawka": 0.89
+      },
+      "del_2": {
+        "data_w": "2024-09-22",
+        "m_docelowe": "Szczecin",
+        "nr_rej": "PO 1324L",
+        "dystans": [
+          360,
+          380
+        ],
+        "stawka": 0.89
+      },
+      "del_3": {
+        "data_w": "2024-09-28",
+        "m_docelowe": "Gdynia",
+        "nr_rej": "PO 1324L",
+        "dystans": [
+          290,
+          310
+        ],
+        "stawka": 0.89
+      }
+    }
+  },
+  {
+    "imie": "Michał",
+    "nazwisko": "Magryś",
+    "dept": "IT",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-10-05",
+        "m_docelowe": "Warszawa",
+        "nr_rej": "WA 2561",
+        "dystans": [
+          62,
+          23
+        ],
+        "stawka": 2
+      },
+      "del_2": {
+        "data_w": "2024-11-02",
+        "m_docelowe": "Krakow",
+        "nr_rej": "KK 66712",
+        "dystans": [
+          834,
+          63
+        ],
+        "stawka": 1
+      }
+    }
+  },
+  {
+    "imie": "Karol",
+    "nazwisko": "Bucki",
+    "dept": "Sprzątaczka",
+    "delegacje": {
+      "del_1": {
+        "data_w": "2024-09-28",
+        "m_docelowe": "Rzeszów",
+        "nr_rej": "Rla 51250",
+        "dystans": [
+          44,
+          32
+        ],
+        "stawka": 2
+      },
+      "del_2": {
+        "data_w": "2024-09-26",
+        "m_docelowe": "krakow",
+        "nr_rej": "kk 5612",
+        "dystans": [
+          52,
+          35
+        ],
+        "stawka": 1
+      }
+    }
+  }
+]
