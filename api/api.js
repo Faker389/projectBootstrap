@@ -20,3 +20,15 @@ app.post("/addJson",(req,res)=>{
     })
     res.sendStatus(200).end()
 })
+
+app.post("/searchParam",(req,res)=>{
+    const {str} =req.body
+    var jsonFile = require("./file.json")
+    var returnArray = []
+    for(var x=0;x<jsonFile.length;x++){
+        if(jsonFile[x].imie.toLocaleLowerCase().includes(str)||jsonFile[x].nazwisko.toLocaleLowerCase().includes(str)){
+            returnArray.push(jsonFile[x])
+        }
+    } 
+    res.json(returnArray)
+})
