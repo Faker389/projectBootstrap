@@ -11,7 +11,21 @@
     border-radius: 10px; 
     border: 3px solid #2b2b2b; 
     }
-    
+    input:disabled{
+        cursor: not-allowed;
+    }
+    input{
+        background-color: #444444;
+        outline: none;
+        border: 1px solid white;
+        padding: 6px;
+        border-radius: 25px;
+        padding-left: 10px;
+        color: white;
+    }
+    input::placeholder{
+        color: white;
+    }
     * {
     scrollbar-width: thin;
     scrollbar-color: #444444 #2b2b2b;
@@ -23,9 +37,9 @@
         overflow: hidden;
         background-color: #424545;
     }
-    main{
+    .container{
         width: 100%;
-        height: 90%;
+        height: 100%;
         overflow-y:scroll ;
     }
     .content>div, .head>div{
@@ -38,7 +52,11 @@
     .head{
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+    }
+
+    .card-header{
+        border-bottom: white 1px solid;
     }
     header{
         height: 70px;
@@ -85,9 +103,34 @@
         color: red;
         visibility: hidden;
     }
+    @keyframes brum{
+        0%{
+            right: -250px;
+        }
+        100%{
+            right: 15px;
+        }
+    }
+    .an {
+        animation: brum 1s forwards;
+    }
+    @keyframes papa{
+        0%{
+            opacity: 1;
+        }
+        90% {
+            opacity: 0;
+            right: -250px;
+        }
+        10%{
+            opacity: 1;
+        }
+    }
+    .out{
+        animation: papa 2s forwards;
+    }
     .alert{
-        display: none;
         position: absolute;
         top: 15px;
-        right: 15px;
+        right: -250px;
     }
