@@ -15,11 +15,13 @@ var newObject ={
         
     }
 }
+const input = document.querySelector("input")
 const kontener = document.querySelector(".container")
 const getButton = document.querySelector(".b1")
 const addButton = document.querySelector(".b2")
 const createUser = document.querySelector(".b3")
 const addDelegacja = document.querySelector(".b4")
+const hideUsers = document.querySelector(".b5")
 const closeWindow = document.querySelectorAll(".x")
 const popUpWindow = document.querySelectorAll(".addWindow")
 const warning = document.querySelectorAll(".warn")
@@ -30,6 +32,7 @@ var content;
 // html layout creator funtions
 
 function createRows(obj){
+    kontener.textContent=""
     for(var x=0;x<obj.length;x++){
         var div = "<div class='row'> <div class='col-lg-3 head'></div><div class=' content col-lg-9'></div></div>"
         kontener.innerHTML+=div
@@ -58,8 +61,9 @@ function contentDiv(arr,index){
             <div class="card-body">
                 <h4 class="card-title">Data: ${data_w} </h4>
                 <h4 class="card-title">Kierunek: ${m_docelowe} </h4>
-                <p class="card-text mt-3">Pojazd służbowy:${nr_rej}</p>
-                <p class="card-text">Stawka za delegacje ${stawkaValue.toFixed(2)}</p>
+                <p class="card-text mt-3">Pojazd służbowy: ${nr_rej}</p>
+                <p class="card-text mt-3">Przebyty dystans: ${dystans[0]+dystans[1]} km</p>
+                <p class="card-text">Stawka za delegacje: ${stawkaValue.toFixed(2)}</p>
             </div>
             </div>`
         
@@ -87,10 +91,11 @@ async function postdata(){
             body:JSON.stringify(newObject)
         })
     }catch(err){
-        error.style.setProperty("display","block")
+        error.classList.add("an")
         setTimeout(() => {
-            error.style.setProperty("display","none")
-        }, 2000);
+            error.classList.remove("an")
+            error.style.setProperty("right","-250px")
+        }, 3000);
     }
 }
 async function getData(){
@@ -102,15 +107,38 @@ async function getData(){
             method:"GET"
         })
         const response = await request.json()
+        input.setAttribute("placeholder","Search user")
+        input.disabled=false
         createRows(response)
     }catch(err){
-        error.style.setProperty("display","block")
+        error.classList.add("an")
         setTimeout(() => {
-            error.style.setProperty("display","none")
-        }, 2000);
+            error.classList.remove("an")
+            error.style.setProperty("right","-250px")
+        }, 3000);
     }
 }
 
+
+async function searchData(str){
+    try{
+        const request = await fetch("http://localhost:8000/searchParam",{
+            headers:{
+                "Content-type":"application/json"
+            },
+            method:"POST",
+            body:JSON.stringify({str:str})
+        })
+        const response = await request.json()
+        createRows(response)
+    }catch(err){
+        error.classList.add("an")
+        setTimeout(() => {
+            error.classList.remove("an")
+            error.style.setProperty("right","-250px")
+        }, 3000);
+    }
+}
 //button actions
 
 getButton.addEventListener('click',()=>{
@@ -196,22 +224,32 @@ addDelegacja.addEventListener('click',()=>{
         warning[1].textContent="Pole dystans zawiera tekst"
         return 0    
     }
-        addDelegacja.textContent=`Add delegacja ${currentNumber+1}`
-            newObject.delegacje[`del_${currentNumber}`]={
-                data_w:get(".data"),
-                m_docelowe:get(".cel"),
-                nr_rej:get(".rejestracja"),
-                dystans:arrDystansNr,
-                stawka:parseFloat(get(".stawka")),
-            }
-            document.querySelectorAll(".form2 input").forEach(e=>{
-                e.value=""
-            })
-            if(currentNumber==delegacjeNumber){
-                document.querySelectorAll("input").forEach(e=>{
-                    e.value=""
-                })
-                postdata()
-                popUpWindow[1].style.setProperty("display","none")
-            }
+    addDelegacja.textContent=`Add delegacja ${currentNumber+1}`
+        newObject.delegacje[`del_${currentNumber}`]={
+            data_w:get(".data"),
+            m_docelowe:get(".cel"),
+            nr_rej:get(".rejestracja"),
+            dystans:arrDystansNr,
+            stawka:parseFloat(get(".stawka")),
+    }
+    document.querySelectorAll(".form2 input").forEach(e=>{
+        e.value=""
+    })
+    if(currentNumber==delegacjeNumber){
+        document.querySelectorAll("input").forEach(e=>{
+            e.value=""
+        })
+        postdata()
+        popUpWindow[1].style.setProperty("display","none")
+    }
+})
+
+input.addEventListener("input",()=>{
+    searchData(input.value.trim().toLocaleLowerCase())
+})
+
+hideUsers.addEventListener("click",()=>{
+    kontener.textContent=""
+    input.disabled=true
+    input.setAttribute("placeholder","Get users first")
 })
